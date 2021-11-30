@@ -9,7 +9,7 @@ set +a
 MEETING_ID=$1
 
 echo "converting $MEETING_ID to mp4" |  systemd-cat -p warning -t bbb-mp4
-docker rm -f $MEETING_ID
+docker rm -f bbb-mp4-$MEETING_ID
 rm -f $COPY_TO_LOCATION/$MEETING_ID.mp4
 
 sudo docker run --rm $2 \
